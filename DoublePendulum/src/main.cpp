@@ -35,6 +35,7 @@ int main() {
 	Loop loop;
 
 	Pendulum pendulum({ 100.0f, 100.0f }, 1);
+
 	Trail trail;
 
 	sf::CircleShape p0(5.0f), p1(10.0f), p2(10.0f);
@@ -52,6 +53,7 @@ int main() {
 	sliders.push_back(new Slider(1, 10, "Mass 1", {5.0f, 120.0f}, &pendulum.mass.first));
 	sliders.push_back(new Slider(1, 10, "Mass 2", {5.0f, 150.0f}, &pendulum.mass.second));
 	sliders.push_back(new Slider(1, 2, "Friction", {5.0f, 190.0f}, &pendulum.friction));
+
 
 	sf::Text desctiption("Ctrl+C to reset sliders\nCtrl+Shift+C to reset position and trail", arial, 16);
 	desctiption.setPosition(sf::Vector2<float>(window->getSize()) + sf::Vector2<float>(-800, -40.0f));
