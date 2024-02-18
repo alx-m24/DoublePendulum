@@ -3,12 +3,13 @@
 #include "Common.hpp"
 
 class Pendulum {
-private:
+public:
 	std::pair<sf::Vector2<float>, sf::Vector2<float>> pos = { {0.0f, 0.0f}, {0.0f, 1.0f} };
 	std::pair<float, float> angleVel = { 0.0f, 0.0f };
 	std::pair<float, float> angleAcc = { 0.0f, 0.0f };
 
 	std::pair<float, float> length = { 1.0f, 1.0f };
+	std::pair<float, float> initiallength = { 1.0f, 1.0f };
 	std::pair<float, float> mass = { 2.0f, 2.0f };
 	//std::pair<float, float> angle = { 0.0f, 0.0f };
 	std::pair<float, float> angle = { PI / 2, PI / 2 };

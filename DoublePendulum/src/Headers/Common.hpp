@@ -4,3 +4,4 @@
 #define G 1000
 
 extern sf::RenderWindow* window;
+extern sf::Font arial;

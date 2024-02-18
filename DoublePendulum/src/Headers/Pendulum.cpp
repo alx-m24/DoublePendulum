@@ -1,11 +1,7 @@
 #include "Pendulum.hpp"
 
-Pendulum::Pendulum(std::pair<float, float> Length, unsigned int SubSteps) : length(Length), substeps(SubSteps)
+Pendulum::Pendulum(std::pair<float, float> Length, unsigned int SubSteps) : length(Length), substeps(SubSteps), initiallength(Length)
 {
-	/*
-	length.first *= -1.0f;
-	length.second *= -1.0f;*/
-
 	updatePos();
 }
 
@@ -22,10 +18,9 @@ void Pendulum::update(float dt)
 
 void Pendulum::reset()
 {
-	angle = { PI / 2, PI / 2 };
-	prev_Angle = angle;
-	angleVel = { 0.0f, 0.0f };
-	angleAcc = { 0.0f, 0.0f };
+	length = initiallength;
+	mass = { 2.0f, 2.0f };
+	friction = 1.0f;
 
 	updatePos();
 }
